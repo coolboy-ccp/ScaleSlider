@@ -15,7 +15,10 @@ class ViewController: UIViewController {
         let titles = ["0", "10", "20", "30", "40", "不限"];
         let ss = ScaleSlider(frame: CGRect(x: 15, y: 64, width:UIScreen.main.bounds.width - 30 , height: 0), realCount:51, indexTitle: titles)
         self.view.addSubview(ss)
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let ss1 = ScaleSlider(frame: CGRect(x: 15, y: 200, width:UIScreen.main.bounds.width - 30 , height: 0), realCount:51, indexTitle: titles)
+        self.view.addSubview(ss1)
+        ss1.reset(from: 10, to: 20)
     }
 
     override func didReceiveMemoryWarning() {

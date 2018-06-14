@@ -21,6 +21,7 @@ struct Defauts {
     static let valueFont: UIFont = UIFont.systemFont(ofSize: 14)
     static let titleColor: UIColor = .orange
     static let valueColor: UIColor = .darkGray
+    static let value = "不限"
     static let sliderCallback: ((low: Int, high: Int)) -> String = { scale in
         if scale.0 == 0 && scale.1 == 51 {
             return "不限"
@@ -91,16 +92,12 @@ class ScaleSlider: UIView {
         self.imgWidth = normalImage.size.width
         self.trackWidth = width - imgWidth
         self.titleLabel.text = title
+        self.valueLabel.text = Defauts.value
         if realCount < 1 {
             fatalError("ScaleSlider: count of indexTitles must over 1")
         }
         super.init(frame: frame)
         placeSubViews()
-    }
-    
-    func reset() {
-        placeSubViews()
-        callBack()
     }
     
     private func placeSubViews() {
@@ -222,5 +219,27 @@ class ScaleSlider: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+
+extension ScaleSlider {
+    func reset(from: UInt = 0, to: UInt = UInt.max) {
+        placeSubViews()
+        if from == 0 && to == UInt.max {
+            valueLabel.text = Defauts.value
+        }
+        let realScale = trackWidth / CGFloat(realCount)
+        let left = CGFloat(from)
+        let right = (to > realCount) ? CGFloat(realCount) : CGFloat(to)
+        leftThumb.frame = leftThumb.frame.offsetBy(dx: realScale * left, dy: 0)
+        rightThumb.frame = rightThumb.frame.offsetBy(dx: realScale * right - trackWidth, dy: 0)
+        callBack()
+        
+        
+    }
+    
 }
 
