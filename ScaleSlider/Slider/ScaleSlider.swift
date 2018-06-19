@@ -236,6 +236,7 @@ extension ScaleSlider {
         let right = (to > realCount) ? CGFloat(realCount) : CGFloat(to)
         leftThumb.frame = leftThumb.frame.offsetBy(dx: realScale * left, dy: 0)
         rightThumb.frame = rightThumb.frame.offsetBy(dx: realScale * right - trackWidth, dy: 0)
+        progressView.frame = CGRect(x: leftThumb.center.x, y: progressView.frame.minY, width: rightThumb.center.x - leftThumb.center.x, height: progressView.frame.height)
         callBack()
         
         

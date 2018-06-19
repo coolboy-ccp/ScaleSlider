@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006C60AE20D2083600A2B5CE /* MyTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C60AD20D2083600A2B5CE /* MyTabbarItem.swift */; };
 		00FE558420CFB6770085345D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE558320CFB6770085345D /* AppDelegate.swift */; };
 		00FE558620CFB6770085345D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FE558520CFB6770085345D /* ViewController.swift */; };
 		00FE558920CFB6770085345D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FE558720CFB6770085345D /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		006C60AD20D2083600A2B5CE /* MyTabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabbarItem.swift; sourceTree = "<group>"; };
 		00FE558020CFB6770085345D /* ScaleSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScaleSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FE558320CFB6770085345D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FE558520CFB6770085345D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				00FE559520CFB6860085345D /* Slider */,
 				00FE558320CFB6770085345D /* AppDelegate.swift */,
 				00FE558520CFB6770085345D /* ViewController.swift */,
+				006C60AD20D2083600A2B5CE /* MyTabbarItem.swift */,
 				00FE558720CFB6770085345D /* Main.storyboard */,
 				00FE558C20CFB6780085345D /* LaunchScreen.storyboard */,
 				00FE558F20CFB6780085345D /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				00FE558620CFB6770085345D /* ViewController.swift in Sources */,
 				00FE559720CFB6A90085345D /* ScaleSlider.swift in Sources */,
+				006C60AE20D2083600A2B5CE /* MyTabbarItem.swift in Sources */,
 				00FE558420CFB6770085345D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
